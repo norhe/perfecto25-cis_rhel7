@@ -1,16 +1,16 @@
 class cis_rhel7::params {
 
 # Resource Defaults to NOOP
-File      { noop => false }
-File_line { noop => false }
-User      { noop => false }
-Exec      { noop => false, path => '/usr/bin:/usr/sbin:/bin' }
-Mount     { noop => false }
-Service   { noop => false }
-Package   { noop => false }
-Cron      { noop => false }
-Augeas    { noop => false }
-Pam       { noop => false }
+File      { noop => true }
+File_line { noop => true }
+User      { noop => true }
+Exec      { noop => true, path => '/usr/bin:/usr/sbin:/bin' }
+Mount     { noop => true }
+Service   { noop => true }
+Package   { noop => true }
+Cron      { noop => true }
+Augeas    { noop => true }
+Pam       { noop => true }
 
 # lint:ignore:2sp_soft_tabs lint:ignore:140chars The formatting makes the manifest easier to read
 $cis_scripts_dir = '/tmp/cis_scripts'
